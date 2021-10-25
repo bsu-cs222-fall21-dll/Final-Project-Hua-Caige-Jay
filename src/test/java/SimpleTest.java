@@ -5,4 +5,6 @@ public class SimpleTest {
     public void test(){
 
     }
+    @Test
+    public void test2(){}
 }

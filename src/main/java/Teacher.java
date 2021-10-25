@@ -12,10 +12,10 @@ public class Teacher {
         getID(ID);
     }
 
-    private void getID(String id) {
+    protected void getID(String id) {
         if(id.equals(realID)){
             System.out.println("Thanks");
-            grading.testing();
+            grading.studentFind();
         }else {
             if(tries <= 3){
                 System.out.println("This isn't the right id");

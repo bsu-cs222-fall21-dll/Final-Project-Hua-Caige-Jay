@@ -17,10 +17,10 @@ public class Teacher {
             System.out.println("Thanks");
             grading.studentFind();
         }else {
-            if(tries <= 3){
+            if(tries <= 2){
                 System.out.println("This isn't the right id");
-                teacherCall();
                 tries++;
+                teacherCall();
             }else{
                 System.out.println("You have been locked out");
                 System.exit(1);

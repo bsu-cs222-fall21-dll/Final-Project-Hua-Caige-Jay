@@ -16,7 +16,6 @@ public class Lists {
         int amount = Integer.parseInt(scanner.nextLine());
         for(int i = 0; i <= amount - 1;i++){
             assign = addAssignment();
-            System.out.println(assign);
         }
         return assign;
     }

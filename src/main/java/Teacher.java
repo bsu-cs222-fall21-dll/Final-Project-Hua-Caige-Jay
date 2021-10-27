@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Teacher {
@@ -6,13 +7,13 @@ public class Teacher {
 
     Scanner scanner = new Scanner(System.in);
     Grading grading = new Grading();
-    public void teacherCall() {
+    public void teacherCall() throws IOException {
         System.out.println("Enter ID to get access to grading");
         String ID = scanner.nextLine();
         getID(ID);
     }
 
-    protected void getID(String id) {
+    protected void getID(String id) throws IOException {
         if(id.equals(realID)){
             System.out.println("Thanks");
             grading.studentFind();

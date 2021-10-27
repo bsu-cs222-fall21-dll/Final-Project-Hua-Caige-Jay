@@ -1,6 +1,8 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
+
 public class TestTeacher {
     @Test
     public void test(){
@@ -10,7 +12,7 @@ public class TestTeacher {
         Assertions.assertEquals(ID,input);
     }
     @Test
-    public void test2(){
+    public void test2() throws IOException {
         Teacher teacher = new Teacher();
         teacher.tries = 4;
         teacher.getID("123");

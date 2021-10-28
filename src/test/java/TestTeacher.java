@@ -1,11 +1,12 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class TestTeacher {
     @Test
-    public void test(){
+    public void test() throws FileNotFoundException {
         Teacher teacher = new Teacher();
         String ID = "12345";
         String input = teacher.realID;

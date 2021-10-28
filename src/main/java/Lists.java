@@ -1,3 +1,4 @@
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.Scanner;
@@ -28,4 +29,5 @@ public class Lists {
         listOfGrades.put(name,grade);
         return listOfGrades;
     }
+
 }

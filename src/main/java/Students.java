@@ -4,8 +4,13 @@ import java.util.Scanner;
 
 public class Students {
     Scanner scanner = new Scanner(System.in);
+    File myObj = new File("src/main/java/StudentFile.txt");
+    PrintWriter printWriter = new PrintWriter(myObj);
     Lists lists = new Lists();
-    int lines = 0;
+
+    public Students() throws FileNotFoundException {
+    }
+
     public void callStudent(){
         System.out.println("What is your ID");
         String sID = scanner.nextLine();
@@ -17,22 +22,15 @@ public class Students {
         File myObj = new File("src/main/java/StudentFile.txt");
         System.out.println("1 for all Students 2 for individual student");
         String input = scanner.nextLine();
-        if(input == "1"){
+        if(input.equals("1")){
             listOfAllStudents(myObj);
-        } else if (input == "2"){
+        } else if (input.equals("2")){
             System.out.println();
         }
         return lists.assignments;
     }
     public void createStudent(String name ,String ID) throws FileNotFoundException {
-        File myObj = new File("src/main/java/StudentFile.txt");
-        PrintWriter printWriter = new PrintWriter(myObj);
-        for(int i = 0; i <= lines; i++){
-            printWriter.print("\n");
-        }
-        printWriter.printf("%s %s\n",name, ID);
-        printWriter.close();
-
+        printWriter.append((name + " " + ID + "\n"));
     }
     public void listOfAllStudents(File myObj){
         try {

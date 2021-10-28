@@ -1,3 +1,5 @@
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -5,6 +7,10 @@ public class Grading {
     Scanner scanner = new Scanner(System.in);
     Students students = new Students();
     String input = "3";
+
+    public Grading() throws FileNotFoundException {
+    }
+
     public void studentFind() throws IOException {
         System.out.println("Enter 1 to create student, 2 to look for student");
         input = scanner.nextLine();
@@ -23,6 +29,7 @@ public class Grading {
             studentFind();
         } else {
             System.out.println("Wrong input");
+            students.printWriter.close();
         }
     }
 }

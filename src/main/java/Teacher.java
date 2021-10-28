@@ -1,3 +1,4 @@
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -7,6 +8,10 @@ public class Teacher {
 
     Scanner scanner = new Scanner(System.in);
     Grading grading = new Grading();
+
+    public Teacher() throws FileNotFoundException {
+    }
+
     public void teacherCall() throws IOException {
         System.out.println("Enter ID to get access to grading");
         String ID = scanner.nextLine();

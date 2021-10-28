@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Students {
     Scanner scanner = new Scanner(System.in);
-    File myObj = new File("src/main/java/StudentFile.txt");
+    File myObj = new File("src/main/resources/StudentFile.txt");
     PrintWriter printWriter = new PrintWriter(myObj);
     Lists lists = new Lists();
 
@@ -19,11 +19,10 @@ public class Students {
 
     }
     public ArrayList<String> findStudent(){
-        File myObj = new File("src/main/java/StudentFile.txt");
         System.out.println("1 for all Students 2 for individual student");
         String input = scanner.nextLine();
         if(input.equals("1")){
-            listOfAllStudents(myObj);
+            listOfAllStudents();
         } else if (input.equals("2")){
             System.out.println();
         }
@@ -31,12 +30,11 @@ public class Students {
     }
     public void createStudent(String name ,String ID) throws FileNotFoundException {
         printWriter.append((name + " " + ID + "\n"));
+        System.out.println(lists.assignmentInterface());
     }
-    public void listOfAllStudents(File myObj){
+    public void listOfAllStudents(){
         try {
             Scanner myReader = new Scanner(myObj);
-
-            System.out.println(lists.assignmentInterface());
 
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();

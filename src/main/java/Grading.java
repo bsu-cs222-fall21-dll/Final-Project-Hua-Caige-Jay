@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class Grading {
     Scanner scanner = new Scanner(System.in);
     Students students = new Students();
-    String sID = "1234";
     String input = "3";
     public void studentFind() throws IOException {
         System.out.println("Enter 1 to create student, 2 to look for student");
@@ -18,11 +17,10 @@ public class Grading {
             System.out.println("Enter student's ID:");
             String ID = scanner.nextLine();
             students.createStudent(name, ID);
+            studentFind();
         } else if (input.equals("2")) {
-            System.out.println("Enter Student's ID");
-            sID = scanner.nextLine();
-            System.out.println(students.findStudent(sID));
-
+            System.out.println(students.findStudent());
+            studentFind();
         } else {
             System.out.println("Wrong input");
         }

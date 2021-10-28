@@ -9,6 +9,6 @@ public class TestStudent {
     public void findListTest(){
         Students students = new Students();
         Object nullCheck = null;
-        Assertions.assertEquals( nullCheck ,students.findStudent(""));
+        Assertions.assertEquals(null,students.findStudent());
     }
 }

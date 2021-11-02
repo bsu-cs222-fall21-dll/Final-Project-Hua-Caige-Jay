@@ -7,7 +7,6 @@ public class Menu {
         Scanner scanner = new Scanner(System.in);
         Teacher teacher = new Teacher();
         Students students = new Students();
-        Grading grading  = new Grading();
         int quit = 0;
         String answer;
         System.out.println("Welcome to the Zybra ");

@@ -19,6 +19,8 @@ public class Menu {
                 students.callStudent();
             }else if (answer.equals("q")){
                 break;
+            }else{
+                System.out.println("Invalid input. please enter the correct number for choices");
             }
         }
     }

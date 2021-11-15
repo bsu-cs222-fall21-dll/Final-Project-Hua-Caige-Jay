@@ -25,6 +25,8 @@ public class Students {
             listOfAllStudents();
         } else if (input.equals("2")){
             System.out.println();
+        }else{
+            System.out.println("Invalid input. please enter the correct number for choices");
         }
         return lists.assignments;
     }

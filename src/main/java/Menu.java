@@ -1,5 +1,4 @@
 import java.io.IOException;
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Menu {
@@ -14,8 +13,10 @@ public class Menu {
             System.out.println("Enter 1 for teacher, 2 for student, or q to quit");
             answer = scanner.nextLine();
             if (answer.equals("1")){
+                System.out.println("Entering Security...");
                 teacher.teacherCall();
             }else if (answer.equals("2")){
+                System.out.println("Entering Class...");
                 students.callStudent();
             }else if (answer.equals("q")){
                 break;

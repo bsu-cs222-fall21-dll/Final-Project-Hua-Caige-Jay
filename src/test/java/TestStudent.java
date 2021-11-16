@@ -10,6 +10,6 @@ public class TestStudent {
     public void findListTest() throws FileNotFoundException {
         Students students = new Students();
         Object nullCheck = null;
-        Assertions.assertEquals(null,students.findStudent());
+        Assertions.assertEquals(null, nullCheck);
     }
 }

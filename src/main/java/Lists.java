@@ -11,8 +11,6 @@ public class Lists{
     ArrayList<Object> exam = new ArrayList<>();
     ArrayList<Object> individualQ = new ArrayList<>();
     ArrayList<Object> quiz = new ArrayList<>();
-    String listAdd;
-    String listStart;
 
     public void makeAt(String ID,String section) {
         System.out.printf("What is the %s name?\n",section);
@@ -27,6 +25,6 @@ public class Lists{
         individualA.remove(0); individualA.remove(0);
     }
     public void makeStudent(String name, String ID){
-
+        //put student into file list to be uploaded to student file based on id
     }
 }

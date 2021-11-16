@@ -12,7 +12,7 @@ public class Grading {
     }
 
     public String chooseSection(){
-        String section = "Nothing was chosen";
+        String section;
         label:
         while(1 == 1){
             System.out.println("Type 1 for Tests, 2 for Quizzes, 3 for Attendance, 4 for Exam");
@@ -53,8 +53,6 @@ public class Grading {
             lists.makeStudent(name,ID);
 
         } else if (input.equals("2")) {
-            System.out.println("What is the sID");
-            String sID = scanner.nextLine();
             students.findStudent();
         } else {
             System.out.println("Wrong input");

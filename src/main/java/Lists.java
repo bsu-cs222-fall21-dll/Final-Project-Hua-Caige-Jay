@@ -19,7 +19,9 @@ public class Lists{
         String aName = scanner.nextLine();
         individualA.add(0, aName);
         System.out.println();
-        individualA.add(1, 80);
+        System.out.printf("What grade is the %s\n",section);
+        String aNum = scanner.nextLine();
+        individualA.add(1, aNum);
         attendance.add(individualA);
         System.out.println(attendance.get(0));
         individualA.remove(0); individualA.remove(0);

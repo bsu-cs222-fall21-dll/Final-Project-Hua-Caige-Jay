@@ -13,24 +13,27 @@ public class Grading {
 
     public String chooseSection(){
         String section = "Nothing was chosen";
+        label:
         while(1 == 1){
             System.out.println("Type 1 for Tests, 2 for Quizzes, 3 for Attendance, 4 for Exam");
             String input = scanner.nextLine();
-            if(input.equals("1")){
-                section = "Tests";
-                break;
-            } else if(input.equals("2")){
-                section = "Quiz";
-                break;
-            } else if(input.equals("3")){
-                section = "Attendance";
-                break;
-            } else if(input.equals("4")){
-                section = "Exam";
-                break;
-            } else {
-                System.out.println("Wrong Input");
-                chooseSection();
+            switch (input) {
+                case "1":
+                    section = "Tests";
+                    break label;
+                case "2":
+                    section = "Quiz";
+                    break label;
+                case "3":
+                    section = "Attendance";
+                    break label;
+                case "4":
+                    section = "Exam";
+                    break label;
+                default:
+                    System.out.println("Wrong Input");
+                    chooseSection();
+                    break;
             }
         }
         return section;

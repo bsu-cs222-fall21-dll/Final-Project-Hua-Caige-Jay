@@ -1,55 +1,33 @@
-import java.io.FileWriter;
 import java.util.ArrayList;
-import java.util.Hashtable;
 import java.util.Scanner;
 
-public class Lists {
-    ArrayList<String> assignments = new ArrayList<>();
-    ArrayList<Float> grade = new ArrayList<>();
+public class Lists{
     Scanner scanner = new Scanner(System.in);
-    Hashtable assign;
-    public Hashtable assignmentInterface(){
-        System.out.println("How many assignments do you want to add");
-        int amount = Integer.parseInt(scanner.nextLine());
-        for(int i = 0; i <= amount - 1;i++){
-            assign = addAssignment(chooseSection());
-        }
-        return assign;
+    ArrayList<Object> individualA = new ArrayList<>();
+    ArrayList<Object> attendance = new ArrayList<>();
+    public void codeMightUse(){
+//        """
+//        ArrayList<Object> individualT = new ArrayList<>();
+//        ArrayList<Object> test = new ArrayList<>();
+//        ArrayList<Object> individualE = new ArrayList<>();
+//        ArrayList<Object> exam = new ArrayList<>();
+//        ArrayList<Object> individualQ = new ArrayList<>();
+//        ArrayList<Object> quiz = new ArrayList<>();
+//        """
     }
-    public String chooseSection(){
-        String section = "Nothing was chosen";
-        while(1 == 1){
-            System.out.println("Type 1 for Tests, 2 for Quizzes, 3 for Attendance, 4 for Exam");
-            String input = scanner.nextLine();
-            if(input.equals("q")){
-                break;
-            } else if(input.equals("1")){
-                section = "Tests";
-                break;
-            } else if(input.equals("2")){
-                section = "Quiz";
-                break;
-            } else if(input.equals("3")){
-                section = "Attendance";
-                break;
-            } else if(input.equals("4")){
-                section = "Exam";
-                break;
-            } else {
-                System.out.println("Wrong Input");
-                break;
-            }
-        }
-        return section;
+    public void makeAt(String ID,String section) {
+        System.out.printf("What is the %s name?\n",section);
+        String aName = scanner.nextLine();
+        individualA.add(0, aName);
+        System.out.println();
+        System.out.printf("What grade is the %s\n",section);
+        String aNum = scanner.nextLine();
+        individualA.add(1, aNum);
+        attendance.add(individualA);
+        System.out.println(attendance.get(0));
+        individualA.remove(0); individualA.remove(0);
     }
-    public Hashtable<String, Float> addAssignment(String section){
-        System.out.println("Enter the Assignments name");
-        String name = section + " " + scanner.nextLine();
-        System.out.println("Enter the Assignments grade");
-        float grade = Float.parseFloat(scanner.nextLine());
-        Hashtable<String, Float> listOfGrades = new Hashtable<>();
-        listOfGrades.put(name,grade);
-        return listOfGrades;
+    public void makeStudent(String name, String ID){
+        //put student into file list to be uploaded to student file based on id
     }
-
 }

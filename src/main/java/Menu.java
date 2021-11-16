@@ -20,7 +20,7 @@ public class Menu {
             }else if (answer.equals("q")){
                 break;
             }else{
-                System.out.println("Invalid input. please enter the correct number for choices");
+                System.out.println("Invalid input. Please enter 1, 2, or q to proceed");
             }
         }
     }

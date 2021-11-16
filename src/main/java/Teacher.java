@@ -24,7 +24,7 @@ public class Teacher {
             grading.studentFind();
         }else {
             if(tries <= 2){
-                System.out.println("This isn't the right id");
+                System.out.println("Incorrect ID");
                 tries++;
                 teacherCall();
             }else{

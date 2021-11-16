@@ -10,7 +10,6 @@ public class Menu {
         String answer;
         System.out.println("Welcome to the Zybra!!!");
         label:
-
         while(quit == 0){
             System.out.println("Enter 1 for teacher, 2 for student, or q to quit");
             answer = scanner.nextLine();

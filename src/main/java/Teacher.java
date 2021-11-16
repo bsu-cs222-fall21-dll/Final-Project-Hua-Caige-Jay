@@ -13,7 +13,7 @@ public class Teacher {
     }
 
     public void teacherCall() throws IOException {
-        System.out.println("Enter ID to get access to grading");
+        System.out.println("Enter ID to access to grading");
         String ID = scanner.nextLine();
         getID(ID);
     }
@@ -22,15 +22,17 @@ public class Teacher {
         if(id.equals(realID)){
             System.out.println("Thanks");
             grading.studentFind();
-        }else {
-            if(tries <= 2){
-                System.out.println("Incorrect ID");
+        }else if(tries <= 1) {
+            System.out.println("Incorrect ID");
+            tries++;
+            teacherCall();
+            }else if(tries <=2){
+                System.out.println("Last try. Input valid ID, otherwise you will be locked out");
                 tries++;
                 teacherCall();
-            }else{
-                System.out.println("You have been locked out");
-                System.exit(1);
+                }else{
+                    System.out.println("You have been locked out");
+                    System.exit(1);
             }
         }
     }
-}

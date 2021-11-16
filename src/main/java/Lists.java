@@ -5,12 +5,12 @@ public class Lists{
     Scanner scanner = new Scanner(System.in);
     ArrayList<Object> individualA = new ArrayList<>();
     ArrayList<Object> attendance = new ArrayList<>();
-    ArrayList<Object> individualT = new ArrayList<>();
-    ArrayList<Object> test = new ArrayList<>();
-    ArrayList<Object> individualE = new ArrayList<>();
-    ArrayList<Object> exam = new ArrayList<>();
-    ArrayList<Object> individualQ = new ArrayList<>();
-    ArrayList<Object> quiz = new ArrayList<>();
+//    ArrayList<Object> individualT = new ArrayList<>();
+//    ArrayList<Object> test = new ArrayList<>();
+//    ArrayList<Object> individualE = new ArrayList<>();
+//    ArrayList<Object> exam = new ArrayList<>();
+//    ArrayList<Object> individualQ = new ArrayList<>();
+//    ArrayList<Object> quiz = new ArrayList<>();
 
     public void makeAt(String ID,String section) {
         System.out.printf("What is the %s name?\n",section);

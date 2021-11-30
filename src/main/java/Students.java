@@ -25,7 +25,11 @@ public class Students {
         }
     }
     public static void makeStudent(String name, String id){
-
+        ArrayList<String> callList = new ArrayList<>();
+        callList.add(name);
+        callList.add(id);
+        ArrayList<Object> listFinal = new ArrayList<>();
+        listFinal.add(callList);
     }
 
     public void findStudentTeacher() throws FileNotFoundException {

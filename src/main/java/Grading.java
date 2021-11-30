@@ -45,11 +45,13 @@ public class Grading {
     public void studentFind() throws IOException {
         System.out.println("Enter 1 to look for student");
         input = scanner.nextLine();
+        System.out.println("Entering student's view...");
         ifState(input);
     }
     public void studentFindTeacher() throws IOException {
         System.out.println("Enter 1 to create student, 2 to look for student");
         input = scanner.nextLine();
+        System.out.println("Entering teacher's view...");
         ifStateTeacher(input);
     }
     public void ifState(String input) throws IOException {

@@ -48,8 +48,7 @@ public class Grading {
         if (input.equals("1")){
             System.out.println("Enter student's name: ");
             String name = scanner.nextLine();
-            System.out.println("Enter student's ID:");
-            String ID = scanner.nextLine();
+            String ID = studentID();
             lists.makeStudent(name,ID);
 
         } else if (input.equals("2")) {
@@ -58,5 +57,17 @@ public class Grading {
             System.out.println("Wrong input");
             students.printWriter.close();
         }
+    }
+    public String studentID(){
+        System.out.println("Enter student's ID:");
+        String ID = scanner.nextLine();
+        if(ID.equals("12345")){
+            System.out.println("You can't use this password");
+            studentID();
+        }
+        else{
+            System.out.println("Good password");
+        }
+        return ID;
     }
 }

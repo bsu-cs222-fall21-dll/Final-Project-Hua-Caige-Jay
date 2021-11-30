@@ -11,22 +11,27 @@ public class Students {
     public Students() throws FileNotFoundException {
     }
 
-    public String callStudent(){
-        System.out.println("What is your ID");
-        String sID = scanner.nextLine();
-        System.out.println();
-        return sID;
-
+    public void callStudent() throws FileNotFoundException {
+        findStudent();
     }
     public void findStudent() throws FileNotFoundException {
+        Grading grading = new Grading();
+        System.out.println("1 for individual student");
+        String input = scanner.nextLine();
+        if(input.equals("1")){
+            System.out.println();
+        }else{
+            System.out.println("Invalid input. Please enter 1 to proceed");
+        }
+    }
+    public void findStudentTeacher() throws FileNotFoundException {
         Grading grading = new Grading();
         System.out.println("1 for all Students 2 for individual student");
         String input = scanner.nextLine();
         if(input.equals("1")){
             listOfAllStudents();
         } else if (input.equals("2")){
-            String sID = callStudent();
-            lists.makeAt(sID,grading.chooseSection());
+            System.out.println();
         }else{
             System.out.println("Invalid input. Please enter 1 or 2 to proceed");
         }

@@ -39,11 +39,25 @@ public class Grading {
         return section;
     }
     public void studentFind() throws IOException {
-        System.out.println("Enter 1 to create student, 2 to look for student");
+        System.out.println("Enter 1 to look for student");
         input = scanner.nextLine();
         ifState(input);
     }
+    public void studentFindTeacher() throws IOException {
+        System.out.println("Enter 1 to create student, 2 to look for student");
+        input = scanner.nextLine();
+        ifStateTeacher(input);
+    }
     public void ifState(String input) throws IOException {
+        Lists lists = new Lists();
+        if (input.equals("1")){
+            students.findStudent();
+        } else {
+            System.out.println("Wrong input");
+            students.printWriter.close();
+        }
+    }
+    public void ifStateTeacher(String input) throws IOException {
         Lists lists = new Lists();
         if (input.equals("1")){
             System.out.println("Enter student's name: ");
@@ -52,7 +66,7 @@ public class Grading {
             lists.makeStudent(name,ID);
 
         } else if (input.equals("2")) {
-            students.findStudent();
+            students.findStudentTeacher();
         } else {
             System.out.println("Wrong input");
             students.printWriter.close();

@@ -1,6 +1,7 @@
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Grading {
@@ -20,15 +21,18 @@ public class Grading {
             switch (input) {
                 case "1":
                     section = "Tests";
-                    break label;
+                    ArrayList<Tests> testList = new ArrayList<>();
                 case "2":
-                    section = "Quiz";
+                    section = "Assignments";
+                    ArrayList<Assignments> assignmentList = new ArrayList<>();
                     break label;
                 case "3":
                     section = "Attendance";
+                    ArrayList<Attendance> attendanceList = new ArrayList<>();
                     break label;
                 case "4":
                     section = "Exam";
+                    ArrayList<Exam> examList = new ArrayList<>();
                     break label;
                 default:
                     System.out.println("Wrong Input");

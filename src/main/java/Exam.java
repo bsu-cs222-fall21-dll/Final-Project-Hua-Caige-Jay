@@ -1,19 +1,19 @@
 import java.util.ArrayList;
 
 public class Exam {
-    ArrayList<String> testName = new ArrayList<>();
-    ArrayList<String> testScore = new ArrayList<>();
+    ArrayList<String> examName = new ArrayList<>();
+    ArrayList<String> examScore = new ArrayList<>();
 
     public void addName(String name){
-        testName.add(name);
+        examName.add(name);
     }
     public void removeName(String name){
-        testName.remove(name);
+        examName.remove(name);
     }
     public void addScore(String score){
-        testScore.add(score);
+        examScore.add(score);
     }
     public void removeScore(String score){
-        testScore.remove(score);
+        examScore.remove(score);
     }
 }

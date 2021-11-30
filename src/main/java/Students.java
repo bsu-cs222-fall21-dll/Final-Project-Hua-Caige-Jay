@@ -24,6 +24,10 @@ public class Students {
             System.out.println("Invalid input. Please enter 1 to proceed");
         }
     }
+    public static void makeStudent(String name, String id){
+
+    }
+
     public void findStudentTeacher() throws FileNotFoundException {
         Grading grading = new Grading();
         System.out.println("1 for all Students 2 for individual student");
@@ -37,17 +41,6 @@ public class Students {
         }
     }
     public void listOfAllStudents(){
-        try {
-            Scanner myReader = new Scanner(myObj);
 
-            while (myReader.hasNextLine()) {
-                String data = myReader.nextLine();
-                System.out.println(data);
-            }
-            System.out.println(myObj);
-            myReader.close();
-        } catch(IOException ioException){
-            System.out.println("There was no File Found!!!");
-        }
     }
 }

@@ -67,7 +67,7 @@ public class Grading {
             System.out.println("Enter student's name: ");
             String name = scanner.nextLine();
             String ID = studentID();
-            lists.makeStudent(name,ID);
+            Students.makeStudent(name,ID);
 
         } else if (input.equals("2")) {
             students.findStudentTeacher();

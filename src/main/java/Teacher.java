@@ -21,7 +21,7 @@ public class Teacher {
     protected void getID(String id) throws IOException {
         if(id.equals(realID)){
             System.out.println("Entering Class...");
-            grading.studentFind();
+            grading.studentFindTeacher();
         }else if(tries <= 1) {
             System.out.println("Incorrect ID");
             tries++;

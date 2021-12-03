@@ -12,7 +12,7 @@ public class SubStudents {
         String section;
         label:
         while(1 == 1){
-            System.out.println("Type 1 for Tests, 2 for Quizzes, 3 for Attendance, 4 for Exam");
+            System.out.println("Type 1 for Tests, 2 for Assignments, 3 for Attendance, 4 for Exam");
             String input = scanner.nextLine();
             switch (input) {
                 case "1":

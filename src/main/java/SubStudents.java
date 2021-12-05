@@ -6,7 +6,7 @@ public class SubStudents {
     Scanner scanner = new Scanner(System.in);
     Tests tests = new Tests();
     public void IdStudents(String id){
-
+        System.out.println(Students.listFinal.get(0));
     }
     public void addModule(){
         String section;

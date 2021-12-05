@@ -7,6 +7,8 @@ public class Students {
     File myObj = new File("src/main/resources/StudentFile.txt");
     PrintWriter printWriter = new PrintWriter(myObj);
     Lists lists = new Lists();
+    static ArrayList<Object> listFinal = new ArrayList<>();
+    SubStudents subStudents = new SubStudents();
 
     public Students() throws FileNotFoundException {
     }
@@ -19,7 +21,7 @@ public class Students {
         System.out.println("1 for individual student");
         String input = scanner.nextLine();
         if(input.equals("1")){
-            System.out.println();
+            subStudents.IdStudents("1234");
         }else{
             System.out.println("Invalid input. Please enter 1 to proceed");
         }
@@ -28,7 +30,6 @@ public class Students {
         ArrayList<String> callList = new ArrayList<>();
         callList.add(name);
         callList.add(id);
-        ArrayList<Object> listFinal = new ArrayList<>();
         listFinal.add(callList);
     }
 
@@ -39,12 +40,14 @@ public class Students {
         if(input.equals("1")){
             listOfAllStudents();
         } else if (input.equals("2")){
-            System.out.println();
+            subStudents.IdStudents("1234");
         }else{
             System.out.println("Invalid input. Please enter 1 or 2 to proceed");
         }
     }
     public void listOfAllStudents(){
-
+        for(int i = 0; i < listFinal.size(); i++){
+            System.out.println(listFinal.get(i));
+        }
     }
 }

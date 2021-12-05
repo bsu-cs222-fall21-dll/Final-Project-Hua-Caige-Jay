@@ -8,6 +8,8 @@ public class Students {
     PrintWriter printWriter = new PrintWriter(myObj);
     Lists lists = new Lists();
     static ArrayList<Object> listFinal = new ArrayList<>();
+    static ArrayList<String> callList2 = new ArrayList<String>();
+
     SubStudents subStudents = new SubStudents();
 
     public Students() throws FileNotFoundException {
@@ -21,7 +23,8 @@ public class Students {
         System.out.println("1 for individual student");
         String input = scanner.nextLine();
         if(input.equals("1")){
-            subStudents.IdStudents("1234");
+            String tempID = scanner.nextLine();
+            subStudents.IdStudents(tempID);
         }else{
             System.out.println("Invalid input. Please enter 1 to proceed");
         }
@@ -30,6 +33,7 @@ public class Students {
         ArrayList<String> callList = new ArrayList<>();
         callList.add(name);
         callList.add(id);
+        callList2.add(callList.get(1));
         listFinal.add(callList);
     }
 
@@ -40,7 +44,9 @@ public class Students {
         if(input.equals("1")){
             listOfAllStudents();
         } else if (input.equals("2")){
-            subStudents.IdStudents("1234");
+            System.out.println("Enter the Student's ID");
+            String tempID = scanner.nextLine();
+            subStudents.IdStudents(tempID);
         }else{
             System.out.println("Invalid input. Please enter 1 or 2 to proceed");
         }

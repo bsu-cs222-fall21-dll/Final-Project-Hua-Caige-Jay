@@ -70,6 +70,7 @@ public class Grading {
             String name = scanner.nextLine();
             String ID = studentID();
             Students.makeStudent(name,ID);
+            studentFindTeacher();
 
         } else if (input.equals("2")) {
             students.findStudentTeacher();

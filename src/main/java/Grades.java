@@ -14,7 +14,7 @@ public class Grades {
             switch (input) {
                 case "1":
                     section = "Tests";
-                    ArrayList<Tests> testList = new ArrayList<>();
+                    ArrayList<Object> testList = new ArrayList<>();
                     testList.add(tests.makeAt(input));
                 case "2":
                     section = "Assignments";

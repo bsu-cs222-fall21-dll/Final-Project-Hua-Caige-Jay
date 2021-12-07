@@ -21,11 +21,11 @@ public class Attendance {
     }
 
     public Assignments makeAt(String section) {
-        System.out.printf("What is the %s name?\n",section);
+        System.out.printf("What is the Attendance name?\n");
         String aName = scanner.nextLine();
         moduleAdd.add(0, aName);
         System.out.println();
-        System.out.printf("What grade is the %s\n",section);
+        System.out.printf("What grade is the %s?\n",aName);
         String aNum = scanner.nextLine();
         moduleAdd.add(1, aNum);
         Object moduleSet = moduleAdd;

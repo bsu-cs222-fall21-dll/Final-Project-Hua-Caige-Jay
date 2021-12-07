@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class SubStudents {
+    Grades grades = new Grades();
     Lists lists = new Lists();
     Scanner scanner = new Scanner(System.in);
     public void IdStudents(String id){
@@ -15,7 +16,7 @@ public class SubStudents {
     private void findSpecStudent(String find, String id) {
         if(find.equals(id)){
             System.out.println("Here are some grades");
-
+            grades.addModule();
         } else {
             System.out.print("");
         }

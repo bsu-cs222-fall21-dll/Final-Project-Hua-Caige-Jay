@@ -23,6 +23,7 @@ public class Students {
         System.out.println("1 for individual student");
         String input = scanner.nextLine();
         if(input.equals("1")){
+            System.out.println("Enter your ID:");
             String tempID = scanner.nextLine();
             subStudents.IdStudents(tempID);
         }else{

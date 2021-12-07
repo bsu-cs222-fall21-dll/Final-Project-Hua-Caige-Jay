@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Grades {
+    ArrayList<Object> temp = new ArrayList<>();
     public void addModule(){
         Scanner scanner = new Scanner(System.in);
         Tests tests = new Tests();
@@ -15,7 +16,7 @@ public class Grades {
                 case "1":
                     section = "Tests";
                     ArrayList<Object> testList = new ArrayList<>();
-                    testList.add(tests.makeAt(input));
+                    temp.add(testList.add(tests.makeAt(input)));
                     break label;
                 case "2":
                     section = "Assignments";
@@ -48,8 +49,7 @@ public class Grades {
             switch (input) {
                 case "1":
                     section = "Tests";
-                    ArrayList<Object> testList = new ArrayList<>();
-                    System.out.println(testList);
+                    System.out.println(temp);
                     break label;
                 case "2":
                     section = "Assignments";
@@ -68,7 +68,6 @@ public class Grades {
                     break label;
                 default:
                     System.out.println("Wrong Input");
-                    addModule();
                     break;
             }
         }

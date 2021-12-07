@@ -18,7 +18,7 @@ public class Grades {
                     testList.add(tests.makeAt(input));
                 case "2":
                     section = "Assignments";
-                    ArrayList<Assignments> assignmentList = new ArrayList<>();
+                    ArrayList<Object> assignmentList = new ArrayList<>();
                     assignmentList.add(assignments.makeAt(input));
                     break label;
                 case "3":

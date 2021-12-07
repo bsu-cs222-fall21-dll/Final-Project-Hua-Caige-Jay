@@ -20,7 +20,7 @@ public class Assignments {
         assignmentScore.remove(score);
     }
 
-    public Assignments makeAt(String section) {
+    public Object makeAt(String section) {
         System.out.printf("What is the Assignments name?\n");
         String aName = scanner.nextLine();
         moduleAdd.add(0, aName);
@@ -30,6 +30,6 @@ public class Assignments {
         moduleAdd.add(1, aNum);
         Object moduleSet = moduleAdd;
         moduleAdd.remove(0); moduleAdd.remove(0);
-        return (Assignments) moduleSet;
+        return moduleSet;
     }
 }

@@ -1,8 +1,11 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Attendance {
     ArrayList<String> attendanceName = new ArrayList<>();
     ArrayList<String> attendanceScore = new ArrayList<>();
+    Scanner scanner = new Scanner(System.in);
+    ArrayList<Object> moduleAdd = new ArrayList<>();
 
     public void addName(String name){
         attendanceName.add(name);
@@ -15,5 +18,18 @@ public class Attendance {
     }
     public void removeScore(String score){
         attendanceScore.remove(score);
+    }
+
+    public Assignments makeAt(String section) {
+        System.out.printf("What is the Attendance name?\n");
+        String aName = scanner.nextLine();
+        moduleAdd.add(0, aName);
+        System.out.println();
+        System.out.printf("What grade is the %s?\n",aName);
+        String aNum = scanner.nextLine();
+        moduleAdd.add(1, aNum);
+        Object moduleSet = moduleAdd;
+        moduleAdd.remove(0); moduleAdd.remove(0);
+        return (Assignments) moduleSet;
     }
 }

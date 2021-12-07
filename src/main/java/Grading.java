@@ -11,43 +11,6 @@ public class Grading {
 
     public Grading() throws FileNotFoundException {
     }
-
-    public String chooseSection(){
-        String section;
-        label:
-        while(1 == 1){
-            System.out.println("Type 1 for Tests, 2 for Quizzes, 3 for Attendance, 4 for Exam");
-            String input = scanner.nextLine();
-            switch (input) {
-                case "1":
-                    section = "Tests";
-                    ArrayList<Tests> testList = new ArrayList<>();
-                case "2":
-                    section = "Assignments";
-                    ArrayList<Assignments> assignmentList = new ArrayList<>();
-                    break label;
-                case "3":
-                    section = "Attendance";
-                    ArrayList<Attendance> attendanceList = new ArrayList<>();
-                    break label;
-                case "4":
-                    section = "Exam";
-                    ArrayList<Exam> examList = new ArrayList<>();
-                    break label;
-                default:
-                    System.out.println("Wrong Input");
-                    chooseSection();
-                    break;
-            }
-        }
-        return section;
-    }
-    public void studentFind() throws IOException {
-        System.out.println("Enter 1 to look for student");
-        input = scanner.nextLine();
-        System.out.println("Entering student's view...");
-        ifState(input);
-    }
     public void studentFindTeacher() throws IOException {
         System.out.println("Enter 1 to create student, 2 to look for student");
         input = scanner.nextLine();

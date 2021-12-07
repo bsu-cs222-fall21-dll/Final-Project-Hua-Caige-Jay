@@ -19,17 +19,16 @@ public class Tests {
     public void removeScore(String score){
         testScore.remove(score);
     }
-    public Tests makeAt(String section){
-        System.out.printf("What is the %s name?\n",section);
+    public Object makeAt(String section){
+        System.out.println("What is the Test's name?");
         String aName = scanner.nextLine();
         moduleAdd.add(0, aName);
-        System.out.println();
-        System.out.printf("What grade is the %s\n",section);
+        System.out.printf("What grade is the %s?\n",aName);
         String aNum = scanner.nextLine();
         moduleAdd.add(1, aNum);
         Object moduleSet = moduleAdd;
         moduleAdd.remove(0); moduleAdd.remove(0);
 
-        return (Tests) moduleSet;
+        return moduleSet;
     }
 }

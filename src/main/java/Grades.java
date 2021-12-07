@@ -16,6 +16,7 @@ public class Grades {
                     section = "Tests";
                     ArrayList<Object> testList = new ArrayList<>();
                     testList.add(tests.makeAt(input));
+                    break label;
                 case "2":
                     section = "Assignments";
                     ArrayList<Object> assignmentList = new ArrayList<>();
@@ -31,7 +32,6 @@ public class Grades {
                     break label;
                 default:
                     System.out.println("Wrong Input");
-                    addModule();
                     break;
             }
         }
@@ -50,18 +50,21 @@ public class Grades {
                     section = "Tests";
                     ArrayList<Object> testList = new ArrayList<>();
                     System.out.println(testList);
+                    break label;
                 case "2":
                     section = "Assignments";
                     ArrayList<Object> assignmentList = new ArrayList<>();
-                    assignmentList.add(assignments.makeAt(input));
+                    System.out.println(assignmentList);
                     break label;
                 case "3":
                     section = "Attendance";
                     ArrayList<Attendance> attendanceList = new ArrayList<>();
+                    System.out.println(attendanceList);
                     break label;
                 case "4":
                     section = "Exam";
                     ArrayList<Exam> examList = new ArrayList<>();
+                    System.out.println(examList);
                     break label;
                 default:
                     System.out.println("Wrong Input");

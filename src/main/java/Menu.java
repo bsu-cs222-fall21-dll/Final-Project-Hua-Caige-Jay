@@ -11,14 +11,11 @@ public class Menu {
         System.out.println("Welcome to the Zybra!!!");
         label:
         while(quit == 0){
-            System.out.println("Enter 1 for teacher, 2 for student, or q to quit");
+            System.out.println("--Enter 1 to enter the grading " +
+                               "system for classes or q to quit--");
             answer = scanner.nextLine();
             switch (answer) {
                 case "1":
-                    System.out.println("Entering Security...");
-                    teacher.teacherCall();
-                    break;
-                case "2":
                     System.out.println("Entering Class...");
                     students.callStudent();
                     break;

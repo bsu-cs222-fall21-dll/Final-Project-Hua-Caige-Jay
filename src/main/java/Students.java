@@ -15,19 +15,19 @@ public class Students {
     public Students() throws FileNotFoundException {
     }
 
-    public void callStudent() throws FileNotFoundException {
+    public void callStudent() throws IOException {
         findStudent();
     }
-    public void findStudent() throws FileNotFoundException {
-        Grading grading = new Grading();
-        System.out.println("1 for individual student");
+    public void findStudent() throws IOException {
+        Teacher teacher = new Teacher();
+        System.out.println("1 for Student, 2 for Teacher");
         String input = scanner.nextLine();
         if(input.equals("1")){
             System.out.println("Enter your ID:");
             String tempID = scanner.nextLine();
             subStudents.IdStudents(tempID);
         }else{
-            System.out.println("Invalid input. Please enter 1 to proceed");
+            teacher.teacherCall();
         }
     }
     public static void makeStudent(String name, String id){
@@ -47,7 +47,7 @@ public class Students {
         } else if (input.equals("2")){
             System.out.println("Enter the Student's ID");
             String tempID = scanner.nextLine();
-            subStudents.IdStudents(tempID);
+            subStudents.findSpecStudentT(tempID,tempID);
         }else{
             System.out.println("Invalid input. Please enter 1 or 2 to proceed");
         }

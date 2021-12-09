@@ -1,7 +1,5 @@
 import java.io.FileNotFoundException;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Grading {
@@ -18,7 +16,6 @@ public class Grading {
         ifStateTeacher(input);
     }
     public void ifState(String input) throws IOException {
-        Lists lists = new Lists();
         if (input.equals("1")){
             students.findStudent();
         } else {
@@ -27,7 +24,6 @@ public class Grading {
         }
     }
     public void ifStateTeacher(String input) throws IOException {
-        Lists lists = new Lists();
         if (input.equals("1")){
             System.out.println("Enter student's name: ");
             String name = scanner.nextLine();

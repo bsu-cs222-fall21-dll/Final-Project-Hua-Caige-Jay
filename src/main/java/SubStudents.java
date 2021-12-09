@@ -10,7 +10,6 @@ public class SubStudents {
             String temp = Students.callList2.get(i);
             findSpecStudentT(temp, id);
         }
-        System.out.println("Couldn't find student's ID");
     }
 
     private void findSpecStudent(String find, String id) {
@@ -22,7 +21,7 @@ public class SubStudents {
             System.out.print("");
         }
     }
-    private void findSpecStudentT(String find, String id) {
+    public void findSpecStudentT(String find, String id) {
         if(find.equals(id)){
             System.out.println("Enter teachers id or 2 for student");
             String call = scanner.nextLine();

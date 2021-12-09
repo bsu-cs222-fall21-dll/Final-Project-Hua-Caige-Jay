@@ -14,7 +14,7 @@ public class Grades {
         Exam exam = new Exam();
         label:
         while(true){
-            System.out.println("Type 1 for Tests, 2 for Assignments, 3 for Attendance, 4 for Exam");
+            System.out.println("1: Tests\n2: Assignments\n3: Attendance\n4: Exams\n--------------");
             String input = scanner.nextLine();
             switch (input) {
                 case "1":
@@ -30,7 +30,7 @@ public class Grades {
                     examList.add(exam.makeAt());
                     break label;
                 default:
-                    System.out.println("Wrong Input");
+                    System.out.println("Wrong Input\n--------------");
                     break;
             }
         }
@@ -85,7 +85,7 @@ public class Grades {
         Scanner scanner = new Scanner(System.in);
         label:
         while(true){
-            System.out.println("Type 1 for Tests, 2 for Assignments, 3 for Attendance, 4 for Exam, 5 for total grade.");
+            System.out.println("1: Tests\n2: Assignments\n3: Attendance\n4: Exams\n5: Total grade.\n--------------");
             String input = scanner.nextLine();
             switch (input) {
                 case "1":
@@ -104,7 +104,7 @@ public class Grades {
                     gradeAll();
                     break label;
                 default:
-                    System.out.println("Wrong Input");
+                    System.out.println("Wrong Input\n--------------");
                     break;
             }
         }

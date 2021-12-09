@@ -10,7 +10,8 @@ public class Grading {
     public Grading() throws FileNotFoundException {
     }
     public void studentFindTeacher() throws IOException {
-        System.out.println("Enter 1 to create student, 2 to look for student");
+        System.out.println("1: create a file of student\n" +
+                "2: q to go back to the main menu\n--------------");
         input = scanner.nextLine();
         System.out.println("Entering teacher's view...");
         ifStateTeacher(input);
@@ -19,34 +20,32 @@ public class Grading {
         if (input.equals("1")){
             students.findStudent();
         } else {
-            System.out.println("Wrong input");
+            System.out.println("Wrong input\n--------------");
             students.printWriter.close();
         }
     }
     public void ifStateTeacher(String input) throws IOException {
         if (input.equals("1")){
-            System.out.println("Enter student's name: ");
+            System.out.println("Create a name of a student:\n-------------- ");
             String name = scanner.nextLine();
             String ID = studentID();
             Students.makeStudent(name,ID);
             studentFindTeacher();
 
-        } else if (input.equals("2")) {
-            students.findStudentTeacher();
         } else {
-            System.out.println("Wrong input");
+            System.out.println("Wrong input\n--------------");
             students.printWriter.close();
         }
     }
     public String studentID(){
-        System.out.println("Enter student's ID:");
+        System.out.println("Create a ID of this student:\n--------------");
         String ID = scanner.nextLine();
         if(ID.equals("12345")){
-            System.out.println("You can't use this password");
+            System.out.println("You can't use this password\n--------------");
             studentID();
         }
         else{
-            System.out.println("Good password");
+            System.out.println("Good password\n--------------");
         }
         return ID;
     }
